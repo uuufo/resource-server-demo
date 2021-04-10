@@ -44,8 +44,8 @@ public class TransactionController {
     @GetMapping(value = "/transactions")
     public TransactionList privateScopedEndpoint(@AuthenticationPrincipal Jwt jwt) {
 
-        String accountName = jwt.getClaimAsString("name");
-        String accountNumber = jwt.getClaimAsString("account_no");
+        String accountName = jwt.getClaimAsString("sub");
+        String accountNumber = jwt.getClaimAsString("accountNo");
 
         List<Transaction> transactions = transactionService.getAll(accountNumber);
 
