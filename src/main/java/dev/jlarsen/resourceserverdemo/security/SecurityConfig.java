@@ -59,6 +59,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //        return jwtDecoder;
 //    }
 
+
     // todo - figure out why Spring isn't auto-detecting the algorithm and get rid of this
     @Bean
     public JwtDecoder jwtDecoder() throws MalformedURLException, KeySourceException {
